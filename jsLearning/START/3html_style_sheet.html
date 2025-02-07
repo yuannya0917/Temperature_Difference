@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+        <title>3html_style_sheet</title>
+        <!--外部样式表
+        浏览器会从href的文件中读到样式声明，并进行格式化文档
+        可以在任何文本编辑器中进行编辑
+        文件不能包含任何的 html 标签
+        样式表应该以 .css 扩展名进行保存-->
+
+        <!--rel:定义当前文档与被链接文档之间的关系
+        type:定义被链接资源的MIME类型
+        href:定义被链接资源的URL-->
+        <link rel="stylesheet" type="text/css" href="3.css">
+
+        <!--内部样式表-->
+        <style>
+            hr{color: aquamarine;}
+            p{margin-left: 20px;}
+            body{background-color:bisque;}
+            /*多重样式用*/
+            h3{
+                text-align: right;
+                font-size: 20pt;
+            }
+        </style>
+    </head>
+        <!--内联样式-->
+    <p style="color: brown;margin-left: 20px;">你好</p>
+    <h3>我不好</h3>
+</html>

@@ -1,0 +1,27 @@
+/*css position 指定了元素的定位类型
+5个值：
+    1.static
+    2.relative
+    3.fixed
+    4.absolute
+    5.sticky
+*/
+
+/*static定位：默认值，没有定位，遵循正常文档流对象*/
+div.static{
+    position: static;
+    border:3px solid #73AD21;
+}
+
+/*fixed定位：元素位置相对于浏览器窗口是固定位置,即使窗口滚动也不会移动*/
+p.pos_fixed{
+    position: fixed;
+}
+
+/*relative定位：相对定位元素的定位是相对其正常位置*/
+
+/*absolute定位：绝对定位的元素的位置相对于最近的已定位父元素，
+如果元素没有已定位的父元素，
+那么它的位置相对于<html>*/
+
+/*sticky定位：基于用户的滚动位置来定位*/

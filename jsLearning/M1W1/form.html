@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>M1W1 form</title>
+        <style>
+                form{
+                    /*居中表单*/
+                    margin: 0 auto;
+                    width: 400px;
+
+                    /*显示表单轮廓*/
+                    padding: 1em;
+                    border: 1px solid #ccc;
+                    border-radius: 1em;
+                }
+
+                ul{
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                form li+li{
+                    margin-top: lem;
+                }
+
+                label{
+                    /*确保lable大小相同且正确对齐*/
+                    display: inline-block;
+                    width:90px;
+                    text-align: right;
+                }
+
+                input,textarea{
+                    /*确保所有文本输入框字体相同*/
+                    font:1em sans-serif;
+
+                    /*确保文本框大小相同*/
+                    width: 300px;
+                    box-sizing: border-box;
+
+                    /*调整文本输入框边框样式*/
+                    border: 1px solid #999;
+                }
+
+                input:focus,textarea:focus{
+                    /*给激活的元素一点高亮效果*/
+                    border-color: #000;
+                }
+
+                textarea{
+                    /*使多行文本输入框和label正确对齐*/
+                    vertical-align: top;
+
+                    /*给文本留下足够空间*/
+                    height: 5em;
+                }
+
+                .button{
+                    /*把按钮放到和文本输入框一样的位置*/
+                    padding-left: 90px;
+                }
+
+                button{
+                    /*外边距大小和label文本框之间间距差不多*/
+                    margin-left: 0.5em;
+                }
+        </style>
+        <!--所有表单都由一个form元素开始
+            实践中最好要设置action和method属性
+            action:定义了在提交表单时，应该把所收集的数据送给谁（URL）去处理
+            method:定义了发送数据的 HTTP 方法（通常是 get 或 post）-->
+            
+
+            <form action="/my-handling-form-page" method="post">
+                <ul>
+                    <li>
+                        <!--label:基本的单行文本字段-->
+                        <label for="name">Name</label>
+                        <!--input:只接受电邮的单行文本字段-->
+                        <input type="text" id="name" name="user_name">
+                    </li>
+                    <li>
+                        <label for="mail">E-mail:</label>
+                        <input type="email" id="mail" name="user_email">
+                    </li>
+                    <li>
+                        <label for="msg">Message:</label>
+                        <!--textarea:基本的多行文本字段-->
+                        <textarea id="msg" name="user_message"></textarea>
+                    </li>
+                    <li class="button">
+                        <!--button:接受一个 type属性，它接受 submit、reset 或者 button 三个值中的任一个-->
+                        <button type="submit">Send Your Message</button>
+                    </li>
+                </ul>
+            </form>
+    </head>
+</html>

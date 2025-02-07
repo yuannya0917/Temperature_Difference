@@ -1,0 +1,71 @@
+<!--css导航栏-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4导航栏</title>
+
+            <style>
+                /*删除边距和填充*/
+                ul{
+                    list-style-type:none;
+                    margin:0;
+                    padding:0;
+                    /*加上边框
+                    border: 1px solid#555;
+                    */
+
+                    /*创建左边使全屏高度的固定导航条，
+                    右边使可滚动的内容*/
+
+                    background-color: #f1f1f1;
+                    height: 100%;
+                    position: fixed;
+                    overflow: auto;/*如果导航栏选项多，允许滚动*/
+                }
+
+                /*使链接居中*/
+                li{
+                    text-align: center;
+                    /*使每个选项都有边框*/
+                    border-bottom: 1px solid#555;
+                }
+                /*:last-child:伪类选择器，用于选择父元素中最后一个子元素
+                这里指的最后一个边框，他的下边框与整个导航框的边框重叠了，
+                需要消去*/
+                li:last-child{
+                    border:none;
+                }
+
+                /*创建垂直导航条*/
+                li a{
+                    display: block;
+                    color: #000;
+                    padding: 8px 16px;
+                    text-decoration: none;
+                }
+
+                /* 鼠标移动到选项上修改背景颜色 */
+                li a:hover{
+                    background-color: #555;
+                    color: white;
+                }
+
+                /*激活当前导航条:添加一个active类*/
+                li a.active{
+                    background-color: #4CAF50;
+                    color:white;
+                }
+
+            </style>
+    </head>
+
+    <body>
+        <ul>
+            <!--导航栏=链接列表-->
+            <li><a href="#home">主页</a></li>
+            <li><a href="#news">新闻</a></li>
+            <li><a href="#contact">联系</a></li>
+            <li><a href="about">关于</a></li>
+        </ul>
+    </body>
+</html>

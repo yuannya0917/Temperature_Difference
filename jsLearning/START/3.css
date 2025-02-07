@@ -1,0 +1,92 @@
+/*这是注释*/
+p{
+    color:red;
+    text-align:center;
+}
+
+/*css id和class  3html_id* /
+
+/* 插入样式表 */
+
+/*1.外部样式表
+当样式需要应用于很多页面时
+通过改变一个文件来改变整个站点的外观
+每个页面使用 <link> 标签链接到样式表*/
+hr{color: aqua;}
+p{margin-left: 20px;color:blueviolet}
+body{background-color: beige;}
+
+/*2.内部样式表 
+当单个文档需要特殊的样式时
+使用 <style> 标签在文档头部定义内部样式表*/
+
+/*3.内联样式 需慎用
+当样式仅需要在一个元素上应用一次时。*/
+
+/*4.多重样式*
+如果某些属性在不同的样式表中被同样的选择器定义
+那么属性值将从更具体的样式表中被继承过来。
+*/
+
+h3{
+    color: red;
+    text-align: left;
+    font-size: 8pt;
+}
+
+/*与3htm_style_sheet得到
+color:red;
+text-align:right;
+font-size:20pt;
+*/
+
+/*5.多重样式优先级
+（内联样式）Inline style 
+> （内部样式）Internal style sheet 
+>（外部样式）External style sheet 
+> 浏览器默认样式
+*/
+
+
+h1{
+    /*css背景*/
+    background-color: antiquewhite;
+    background-image: none;
+    /*背景图像设置定位与不平铺*/
+    background-repeat: no-repeat;
+    /*设置背景图像起始位置*/
+    background-position:0%;
+    /*设置背景是否随页面其他部分滚动*/
+    background-attachment: fixed;
+
+
+    /*css文本*/
+    color: aqua;
+    /*对齐方式*/
+    text-align: center;
+    /*修饰方式*/
+    text-decoration: none;
+
+}
+
+/* css链接 */
+/*正常未访问过的链接*/
+a:link{color: aqua;}
+
+/*已访问过的链接*/
+a:visited{color: red;}
+
+/*鼠标放在链接上*/
+a:hover{color: aqua;}
+
+/*链接被点击瞬间*/
+a:active{color: blue;}
+
+
+/*css列表
+设置不同的列表项标记为有序列表
+设置不同的列表项标记为无序列表
+设置列表项标记为图像
+*/
+
+
