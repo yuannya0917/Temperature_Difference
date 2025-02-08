@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Favorite fruit start</title>
+    <style>
+        /*校验失败时，红色边框*/
+      input:invalid {
+        border: 2px dashed red;
+      }
+
+      /*校验成功时，黑色边框*/
+      input:valid {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+
+<body>
+    <form>
+      <label for="choose">Would you prefer a banana or a cherry?</label>
+      <!--required属性：输入是必须的-->
+      <!--pattern属性：只接受banana或cherry-->
+      <input id="choose" name="i_like" required pattern="banana|cherry|apple">
+      <button>Submit</button>
+    </form>
+</body>
+
+</html>

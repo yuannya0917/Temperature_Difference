@@ -1,0 +1,56 @@
+<style>
+    /*这里是控制整体*/
+    .card-container{
+        /*使用flex布局*/
+        display: flex;
+        /*卡片换行*/
+        flex-wrap: wrap;
+        /*卡片间距*/
+        gap: 20px;
+        /*居中对齐*/
+        justify-content: center;
+        padding: 20px;
+    }
+
+    /*这里控制单个卡片*/
+    .card{
+        background-color: antiquewhite;
+        /*设置边框*/
+        border: 1px solid#ddd;
+        /*设置圆角*/
+        border-radius: 8px;
+        /*内边距*/
+        padding: 15px;
+        /*宽度*/
+        width: 300px;
+        /*文本居中*/
+        text-align: center;
+    }
+    .card img{
+        /*图片缩放*/
+        width: 50%;
+        /*设置元素外边框圆角*/
+        border-radius: 8px;
+    }
+</style>
+
+<section class="card-container">
+    <!--用div表示3个卡片-->
+    <div class="card">
+        <img src="photo.png" alt="image">
+        <h3>card1</h3>
+        <p>这是card1</p>
+    </div>
+
+    <div class="card">
+        <img src="photo.png" alt="image">
+        <h3>card2</h3>
+        <p>这是card2</p>
+    </div>
+
+    <div class="card">
+        <img src="photo.png" alt="image">
+        <h3>card3</h3>
+        <p>这是card3</p>
+    </div>
+</section>
