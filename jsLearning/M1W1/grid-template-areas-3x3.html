@@ -1,0 +1,81 @@
+<style>
+    /*使用grid-template-areas创建布局,需要给区域命名
+    使用grid-area属性来命名区域*/
+    /*添加媒体查询，重新定义布局——满足屏幕空间足够显示两列
+    意思是 当屏幕宽度>=500px时，应用以下形式*/
+    @media(min-width:500px){
+        .wrapper{
+        display: grid;
+        grid-gap: 20px;
+        /*设置布局*/
+        /*三列布局*/
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "nav content sidebar"
+        "nav content ad"
+        "footer footer footer";
+        }
+        
+        nav ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+    .main-head{
+        grid-area: header;
+    }
+
+    .main-nav{
+        grid-area: nav;
+    }
+
+    .content{
+        grid-area: content;
+    }
+
+    .side{
+        grid-area: sidebar;
+    }
+
+    .ad{
+        grid-area:ad;
+    }
+
+    .main-footer{
+        grid-area: footer;
+    }
+</style>
+
+
+<div class="wrapper">
+    <!--设置标题-->
+    <header class="main-head">The header</header>
+    <!--导航栏-->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#">Nav1</a></li>
+            <li><a href="#">Nav2</a></li>
+            <li><a href="#">Nav3</a></li>
+            <li><a href="#">Nav4</a></li>
+        </ul>
+    </nav>
+    <!--主要内容-->
+    <article class="content">
+        <h1>Main article area</h1>
+        <p>
+            In this layout, we display the areas in source order for any screen less
+            that 500 pixels wide. We go to a two column layout, and then to a three
+            column layout by redefining the grid, and the placement of items on the
+            grid.
+        </p>
+    </article>
+
+    <!--边栏-->
+    <aside class="side">Sidebar</aside>
+    <!--广告部分-->
+    <div class="ad">Advertising</div>
+    <!--页脚-->
+    <footer class="main-footer">The footer</footer></footer>
+</div>

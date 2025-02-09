@@ -1,0 +1,78 @@
+<style>
+    .wrapper{
+            display: grid;
+            grid-gap: 20px;
+            /*需要在这里命名col-start*/
+            grid-template-columns: repeat(12 [col-start] 1fr);
+        }
+    .wrapper>*{
+        grid-column: col-start/span 12;
+    }
+    /*下一个断点，标题和导航仍跨整个网格，所以不需指定任何位置*/
+    @media(min-width:500px){
+        nav ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .sidebar{
+            grid-column: col-start /span 3;
+            grid-row:3;
+        }
+        .ad{
+            grid-column: col-start/span 3;
+            grid-row:4;
+        }
+        .article{
+            grid-column: col-start 4/span 9;
+
+        }
+    }
+
+    @media(min-width:700px) {
+        .main-nav{
+            grid-column: col-start /span 2;
+            grid-row:3/5;
+        }
+        .article{
+            grid-column: col-start 3/span 8;
+            grid-row: 3/5;
+        }
+        .sidebar{
+            grid-column: col-start /span 2;
+            grid-row:3;
+        }
+        .ad {
+            grid-column: col-start / span 2;
+            grid-row: 4;
+        }
+        .main-footer {
+            grid-column: col-start / span 12;
+        }
+    }
+</style>
+
+<div class="wrapper">
+    <header class="main-head">The header</header>
+    <nav>
+        <ul class="main-nav">
+            <li><a href="#">nav1</a></li>
+            <li><a href="#">nav2</a></li>
+            <li><a href="#">nav3</a></li>
+        </ul>
+    </nav>
+
+    <article class="article">
+        <h1>Main article area</h1>
+        <p> In this layout, we display the areas in source order for any screen less
+            that 500 pixels wide. We go to a two column layout, and then to a three
+            column layout by redefining the grid, and the placement of items on the
+            grid.
+        </p>
+    </article>
+
+    <div class="sidebar">Sidebar</div>
+    <div class="ad">Advertising</div>
+    <footer class="main-footer">Footer</footer>
+
+</div>
