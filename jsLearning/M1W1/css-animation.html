@@ -1,0 +1,67 @@
+<style>
+    p{
+        animation-duration:3s;
+        animation-name:slidein;
+        /*设定重复动画*/
+        animation-iteration-count: infinite;
+        /*来回运动*/
+        animation-direction: alternate;
+    }
+
+    /*通过keyframes建立关键帧，相当于起点和终点*/
+@keyframes slidein {
+    /*使用了2个关键帧，相当于起点和终点位置*/
+    /*第一个关键帧*/
+    from{
+        /*元素左边距100% 即容器右边界*/
+        margin-left: 100%;
+        /*容器宽度3倍*/
+        width: 300%;
+    }
+
+    /*第二个关键帧*/
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    /*第三个关键帧*/
+    75%{
+        font-size: 200%;
+        margin-left:25%;
+        width: 150%;
+    }
+}
+</style>
+
+<script>
+    var e=document.getElementById("watchme");
+    e.addEventListener("animationstart",listener,false);
+    e.addEventListener("animationend",listener,false);
+    e.addEventListener("animationiteration",listener,false);
+
+    e.className="slidein";
+
+    /*接收事件*/
+    function listener(e){
+        var l=document.createElement("li");
+        switch(e.type){
+            case "animationstart":
+        l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
+        break;
+        case "animationend":
+        l.innerHTML = "Ended: elapsed time is " + e.elapsedTime;
+        break;
+        case "animationiteration":
+        l.innerHTML = "New loop started at time " + e.elapsedTime;
+        break;
+            }
+        document.getElementById("output").appendChild(l);
+    }
+</script>
+
+<p>
+    The Caterpillar and Alice looked at each other for some time in silence: at
+    last the Caterpillar took the hookah out of its mouth, and addressed her in a
+    languid, sleepy voice.
+</p>
